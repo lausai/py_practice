@@ -1,1 +1,6 @@
 *.pyc
+self-executable/__pycache__
+self-executable/build
+self-executable/dist
+self-executable/*.spec
+*.swp
