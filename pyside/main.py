@@ -12,13 +12,22 @@ class MainWindow(QMainWindow):
 
 
     def setup_control(self):
-        self.ui.pushButton.clicked.connect(self.button_clicked)
+        self.ui.pushButton1.clicked.connect(self.button1_clicked)
+        self.ui.pushButton2.clicked.connect(self.button2_clicked)
 
 
-    def button_clicked(self):
+    def button1_clicked(self):
         ret = QMessageBox.information(
             self, 'Msg Box',
-            'This is inline message box, with return',
+            'Hello tab1',
+            QMessageBox.Ok, QMessageBox.Cancel)
+        print('press: ' + str(ret))
+
+
+    def button2_clicked(self):
+        ret = QMessageBox.information(
+            self, 'Msg Box',
+            'Hello tab2',
             QMessageBox.Ok, QMessageBox.Cancel)
         print('press: ' + str(ret))
 
